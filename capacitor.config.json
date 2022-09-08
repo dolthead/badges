@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "badges",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
