@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
       Tab 1
     </ion-title>
@@ -13,12 +13,12 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-button expand="block" (click)="setBadgeCount(badgeCount+1)">Increment</ion-button>
+  <ion-button [ngClass]="{ 'alert' : badgeCount > 5 }" expand="block" (click)="setBadgeCount(badgeCount+1)">Increment</ion-button>
   <ion-button expand="block" (click)="setBadgeCount(badgeCount-1)">Decrement</ion-button>
   <ion-button expand="block" (click)="setBadgeCount(0)">Mark all read</ion-button>
   <hr>
-  <ion-button expand="block" (click)="notifyNow()">Notify Now</ion-button>
-  <ion-button expand="block" (click)="notifyLater()">Notify Later</ion-button>
+  <ion-button color="secondary" expand="block" fill="outline" (click)="notifyNow()">Notify Now</ion-button>
+  <ion-button color="secondary" expand="block" (click)="notifyLater()">Notify Later</ion-button>
 
   <!-- <ion-input type="number" [(ngModel)]="badgeCount" (keyUp)="badgeCountChanged()"></ion-input> -->
 

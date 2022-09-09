@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/quotes */
 import { Component } from '@angular/core';
 import { TextToSpeechAdvanced } from '@awesome-cordova-plugins/text-to-speech-advanced/ngx';
 
@@ -13,12 +14,12 @@ export class Tab2Page {
   constructor(private speech: TextToSpeechAdvanced) {}
 
   speak() {
-    this.speech.speak(this.text);
+    this.speech.speak(this.text || "I don't know what to say");
   }
 
   speakWithOptions() {
     this.speech.speak({
-      text: this.text,
+      text: this.text || "I don't know what to say",
       identifier: 'com.apple.ttsbundle.Samantha-compact',
       rate: 0.75,
       pitch: 0.9,
